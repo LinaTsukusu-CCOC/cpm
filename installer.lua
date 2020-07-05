@@ -58,4 +58,6 @@ for i, v in pairs(package.files) do
     download(v)
 end
 
+shell.setAlias("cpm", INSTALL_DIR .. "LinaTsukusu/cpm/init.lua")
+
 print("CPM instal Completed!")
