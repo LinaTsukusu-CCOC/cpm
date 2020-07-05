@@ -43,7 +43,7 @@ end
 local packagefile = download("package.lon")
 
 local file = fs.open(packagefile, "r")
-local package = serialization.unserialise(file.readAll())
+local package = serialization.unserialize(file.readAll())
 file.close()
 
 download("init.lua")
