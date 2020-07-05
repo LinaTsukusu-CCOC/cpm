@@ -302,7 +302,9 @@ local function main(args, opt)
             or command == "remove" or command == "r" then
             uninstall(packageName, opt.g or opt.global)
         end
-        currentPackage:save(CURRENT_DIR .. "/package.lon")
+        if not (opt.g or opt.global) then
+            currentPackage:save(CURRENT_DIR .. "/package.lon")
+        end
     end, args)
     if not success then
         showError(err)
