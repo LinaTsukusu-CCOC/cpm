@@ -13,7 +13,7 @@
     "table-util.lua",
     "error.lon",
     "README.md",
-  }
+  },
   dependencies = {
   },
 }
