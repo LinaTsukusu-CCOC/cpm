@@ -17,13 +17,20 @@ else
 end
 
 local function getResponse(url)
-    local res = http.get(url)
-    if res == nil then
-        error("Error")
-        return
+    if MOD == CC then
+        local res = http.get(url)
+        if res == nil then
+            error("Error")
+            return
+        end
+        local str = res.readAll()
+        return str
+    else
+        local handle = internet.request(url)
+        local result = ""
+        for chunk in handle do result = result..chunk end
+        return result
     end
-    local str = res.readAll()
-    return str
 end
 
 local function download(filename)
