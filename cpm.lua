@@ -4,6 +4,8 @@
 --- プログラムを管理するプログラム
 --- @author Lina Tsukusu
 
+local getopt = require("getopt")
+
 local CC = "ComputerCraft"
 local OC = "OpenComputers"
 
@@ -17,8 +19,8 @@ if MOD == OC then
     fs = filesystem
 end
 
-local lon = require "lon"
-local Package = require "package-class"
+local lon = require("lon")
+local Package = require("package-class")
 
 --- インストール先ディレクトリ
 local INSTALL_DIR = "/home/"
