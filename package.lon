@@ -1,0 +1,19 @@
+{
+  author = "LinaTsukusu",
+  name = "cpm",
+  description = "",
+  repository = "LinaTsukusu/cpm",
+  version = "1.0.0",
+  files = {
+    "cpm.lua",
+    "lon.lua",
+    "class.lua",
+    "package.lua",
+    "getopt.lua",
+    "table-util.lua",
+    "error.lon",
+    "README.md",
+  }
+  dependencies = {
+  },
+}
