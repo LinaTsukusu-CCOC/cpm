@@ -15,7 +15,7 @@ function getopt(_args, _options)
     local function func(n)
         if options[n] then
             if options[n] == "boolean" then
-                retopt:add(n, true)
+                retopt:insert(n, true)
             else
                 isOpt = true
                 optType = options[n]
@@ -39,7 +39,7 @@ function getopt(_args, _options)
 
             else
                 -- プログラムの引数
-                retarg:add(v)
+                retarg:insert(v)
             end
         else
             -- オプションの引数
