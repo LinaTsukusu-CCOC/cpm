@@ -18,7 +18,7 @@ if MOD == OC then
 end
 
 local lon = require "lon"
-local Package = require "package"
+local Package = require "package-class"
 
 --- インストール先ディレクトリ
 local INSTALL_DIR = "/home/"
