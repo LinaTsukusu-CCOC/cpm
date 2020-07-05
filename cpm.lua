@@ -139,7 +139,7 @@ end
 ---@param isGlobal boolean
 local function install(packageName, isDependencies, isGlobal)
     -- カレントパッケージに依存追加
-    if not isDependencies or not isGlobal then
+    if not isDependencies and not isGlobal then
         if currentPackage:isExistsDependencies(packageName) then
             return
         end
