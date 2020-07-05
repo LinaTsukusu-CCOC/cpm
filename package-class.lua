@@ -5,7 +5,7 @@ local instance = require "class"
 local Package = {}
 
 function Package.new()
-    local obj = instance(self)
+    local obj = instance(Package)
 
     obj.author = ""
     obj.name = ""
