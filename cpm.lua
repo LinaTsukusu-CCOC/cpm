@@ -3,9 +3,6 @@
 --- version: beta 2.0
 --- プログラムを管理するプログラム
 --- @author Lina Tsukusu
-
-local getopt = require("getopt")
-
 local CC = "ComputerCraft"
 local OC = "OpenComputers"
 
@@ -312,7 +309,4 @@ local function main(args, opt)
     end
 end
 
-main(getopt({...}, {
-    h = "boolean", help = "boolean",
-    g = "boolean", global = "boolean",
-}))
+return main
