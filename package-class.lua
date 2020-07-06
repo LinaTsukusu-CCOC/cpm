@@ -4,17 +4,26 @@ local instance = require "class"
 --- パッケージ操作クラス
 local Package = {}
 
-function Package.new()
+function Package.new(data)
     local obj = instance(Package)
 
-    obj.author = ""
-    obj.name = ""
-    obj.description = ""
-    obj.repository = ""
-    obj.version = ""
-    obj.files = {"init.lua",}
-    obj.dependencies = {}
-
+    if data then
+        obj.author = data.author or ""
+        obj.name = data.name or ""
+        obj.description = data.description or ""
+        obj.repository = data.repository or ""
+        obj.version = data.version or ""
+        obj.files = data.files or {}
+        obj.dependencies = data.dependencies or {}
+    else
+        obj.author = ""
+        obj.name = ""
+        obj.description = ""
+        obj.repository = ""
+        obj.version = ""
+        obj.files = {}
+        obj.dependencies = {}
+    end
     return obj
 end
 
@@ -45,7 +54,7 @@ function Package:save(file)
 end
 
 function Package.Load(file)
-    lon.load(file)
+    return Package.new(lon.load(file))
 end
 
 
