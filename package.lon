@@ -2,7 +2,7 @@
   author = "LinaTsukusu",
   name = "cpm",
   description = "",
-  repository = "LinaTsukusu/cpm",
+  repository = "LinaTsukusu-CCOC/cpm",
   version = "1.0.0",
   files = {
     "cpm.lua",

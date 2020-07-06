@@ -34,13 +34,13 @@ local function getResponse(url)
 end
 
 local function download(filename)
-    local url = "https://raw.githubusercontent.com/LinaTsukusu/cpm/master/" .. filename
+    local url = "https://raw.githubusercontent.com/LinaTsukusu-CCOC/cpm/master/" .. filename
     local source = getResponse(url)
     if source == nil then
         error("Error")
         return
     end
-    local filePath = INSTALL_DIR .. "LinaTsukusu/cpm/" .. filename
+    local filePath = INSTALL_DIR .. "LinaTsukusu-CCOC/cpm/" .. filename
     local file = fs.open(filePath, "w")
     file.write(source)
     file.close()
@@ -58,6 +58,6 @@ for i, v in pairs(package.files) do
     download(v)
 end
 
-shell.setAlias("cpm", INSTALL_DIR .. "LinaTsukusu/cpm/init.lua")
+shell.setAlias("cpm", INSTALL_DIR .. "LinaTsukusu-CCOC/cpm/init.lua")
 
 print("CPM instal Completed!")
